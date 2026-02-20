@@ -7,50 +7,164 @@
     <meta name="og:title" content="Links">
     <meta name="og:description" content="Explore all jeme subdomain websites">
     <meta name="keywords" content="links">
-    <style>  
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Newsreader:wght@500;600&family=Work+Sans:wght@400;500;600&display=swap');
+
+      :root {
+        color-scheme: light;
+        --bg-1: #f4f1ea;
+        --bg-2: #ece6db;
+        --ink-1: #1f2328;
+        --ink-2: #5b626b;
+        --card: #fbfbf9;
+        --line: rgba(31, 35, 40, 0.14);
+        --accent: #2b6cb0;
+        --accent-warm: #c86a1a;
+        --shadow: 0 10px 22px rgba(26, 28, 30, 0.12);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
       body {
-        font-family: Arial, sans-serif;
+        font-family: 'Work Sans', 'Segoe UI', sans-serif;
         margin: 0;
-        padding: 50px 0;
-        background-color: #f0f0f0;
-        font-size: 18px;
+        min-height: 100vh;
+        background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+        background-image: linear-gradient(180deg, var(--bg-1), var(--bg-2)),
+          repeating-linear-gradient(45deg, rgba(31, 35, 40, 0.03) 0 2px, transparent 2px 10px);
+        color: var(--ink-1);
       }
+
+      .page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 56px 24px 80px;
+      }
+
+      .hero {
+        text-align: left;
+        margin-bottom: 32px;
+      }
+
       h1 {
-        text-align: center;
+        font-family: 'Newsreader', 'Times New Roman', serif;
+        font-size: clamp(2.1rem, 3.6vw, 3.1rem);
+        margin: 0 0 12px;
+        letter-spacing: -0.01em;
       }
+      h1 a {
+        color: inherit;
+        text-decoration: none;
+        display: inline;
+        background: transparent;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+        font-size: inherit;
+        font-weight: inherit;
+        letter-spacing: inherit;
+        transition: none;
+      }
+      h1 a:hover {
+        color: inherit;
+        transform: none;
+        border-color: transparent;
+        box-shadow: none;
+      }
+
+      h1 a:focus-visible {
+        outline: 3px solid rgba(200, 106, 26, 0.5);
+        outline-offset: 4px;
+      }
+
+      .subtitle {
+        margin: 0 auto;
+        max-width: 520px;
+        color: var(--ink-2);
+        font-size: clamp(1rem, 2vw, 1.25rem);
+      }
+
       ul {
-        list-style-type: none;
+        list-style: none;
         padding: 0;
         margin: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
       }
+
       li {
-        margin: 14px 0;
+        animation: none;
       }
+
       a {
+        display: block;
         text-decoration: none;
-        color: #0088ff;
-        font-size: 1.5em;
-        transition: color 0.3s;
+        color: var(--ink-1);
+        background: var(--card);
+        padding: 14px 16px;
+        border-radius: 12px;
+        border: 1px solid var(--line);
+        box-shadow: var(--shadow);
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
       }
+
       a:hover {
-        color: #00ddff;
-      }    
+        transform: translateY(-2px);
+        border-color: rgba(43, 108, 176, 0.35);
+        color: var(--accent);
+        box-shadow: 0 16px 30px rgba(26, 28, 30, 0.18);
+      }
+
+      a:focus-visible {
+        outline: 3px solid rgba(200, 106, 26, 0.5);
+        outline-offset: 3px;
+      }
+
+      .highlight {
+        color: var(--accent-warm);
+      }
+
+      @media (max-width: 600px) {
+        .page {
+          padding-top: 44px;
+        }
+
+        a {
+          padding: 14px 16px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
     </style>
   </head>
   <body>
-    <h1>Links</h1>
-    <ul>
-      <li>
-        <a href="https://jeme.app">jeme.app</a>
-      </li>
+    <main class="page">
+      <header class="hero">
+        <h1><a href="https://jeme.app">jeme.app</a> <span class="highlight">links</span></h1>
+        <p class="subtitle">Every jeme.app subdomain in one place.</p>
+      </header>
+      <ul>
       <li>
         <a href="https://age.jeme.app">age</a>
       </li>
       <li>
         <a href="https://ailurus.jeme.app">ailurus</a>
+      </li>
+      <li>
+        <a href="https://audio.jeme.app">audio</a>
+      </li>
+      <li>
+        <a href="https://avaan.jeme.app">avaan</a>
       </li>
       <li>
         <a href="https://calendar.jeme.app">calendar</a>
@@ -75,6 +189,9 @@
       </li>
       <li>
         <a href="https://foxel.jeme.app">foxel</a>
+      </li>
+      <li>
+        <a href="https://input.jeme.app">input</a>
       </li>
       <li>
         <a href="https://kupla.jeme.app">kupla</a>
@@ -104,13 +221,28 @@
         <a href="https://percentageclock.jeme.app">percentageclock</a>
       </li>
       <li>
+        <a href="https://qr.jeme.app">qr</a>
+      </li>
+      <li>
         <a href="https://r.jeme.app">r</a>
       </li>
       <li>
         <a href="https://respanda.jeme.app">respanda</a>
       </li>
       <li>
+        <a href="https://sort.jeme.app">sort</a>
+      </li>
+      <li>
+        <a href="https://stats.jeme.app">stats</a>
+      </li>
+      <li>
         <a href="https://sumi.jeme.app">sumi</a>
+      </li>
+      <li>
+        <a href="https://symbols.jeme.app">symbols</a>
+      </li>
+      <li>
+        <a href="https://sys.jeme.app">sys</a>
       </li>
       <li>
         <a href="https://time.jeme.app">time</a>
@@ -119,14 +251,30 @@
         <a href="https://timer.jeme.app">timer</a>
       </li>
       <li>
+        <a href="https://u.jeme.app">u</a>
+      </li>
+      <li>
+        <a href="https://uuid.jeme.app">uuid</a>
+      </li>
+      <li>
         <a href="https://uwu.jeme.app">uwu</a>
+      </li>
+      <li>
+        <a href="https://vibrate.jeme.app">vibrate</a>
+      </li>
+      <li>
+        <a href="https://vr.jeme.app">vr</a>
       </li>
       <li>
         <a href="https://wafflet.jeme.app">wafflet</a>
       </li>
       <li>
+        <a href="https://webcam.jeme.app">webcam</a>
+      </li>
+      <li>
         <a href="https://xor2.jeme.app">xor2</a>
       </li>
-    </ul>
+      </ul>
+    </main>
   </body>
 </html>
